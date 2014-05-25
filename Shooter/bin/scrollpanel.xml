@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="start" controller="jme3test.helloworld.HelloTerrain">
+        <layer childLayout="center">
+            <panel childLayout="horizontal" align="right" valign="top" width="50%" height="20%" padding="0">
+                <control id="list"  name="listBox" horizontal="off" height="100%" width="100%" displayItems="5">
+                    <!-- first child is the content, the area to scroll around -->
+                </control>
+            </panel>
+            <panel childLayout="horizontal" align="left" valign="top" width="50%" height="20%" padding="0">
+                <control id="oirginglist"  name="listBox" horizontal="off" height="100%" width="100%" displayItems="5">
+                    <!-- first child is the content, the area to scroll around -->
+                </control>
+            </panel>
+        </layer>
+    </screen>
+</nifty>
