@@ -38,7 +38,10 @@ public class Console{
     	ip = Toolkit.getIpv4();
     	if(args.length>0)
     		player_name = args[0];
-    	init_communication_layer();
+    	String group_str = "228.5.6.7";
+    	if(args.length>0)
+    		group_str = args[0];
+    	init_communication_layer(group_str);
 //        initMultiCastSocket("228.5.6.7",6789);      
         //init maps
         otherPlayers = new HashMap<String, Character>();       
@@ -62,10 +65,10 @@ public class Console{
 
     }
     
-    public static void init_communication_layer(){
+    public static void init_communication_layer(String group_str){
     	try{
     		messageQueue = new LinkedList<Message>();
-    		group = InetAddress.getByName("228.5.6.7");
+    		group = InetAddress.getByName(group_str);
         	peer = new Peer(messageQueue, group);
     	}catch(IOException e){
     		e.printStackTrace();
