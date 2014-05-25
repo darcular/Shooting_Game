@@ -101,8 +101,8 @@ public abstract class CommAgent {
 			}
 		}
 		// if there are some messages missing before this message
-		System.out.println(id);
-		System.out.println(list.size());
+//		System.out.println(id);
+//		System.out.println(list.size());
 		if (id > list.size()) {
 			for (int i = list.size(); i < id; i++) {
 				// mark the missing messages as null
